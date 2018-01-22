@@ -26,8 +26,8 @@ public class Point3d extends Point {
 
     @Override
     public void generateRandomCor() {
-        Random random = new Random();
-        this.z = random.nextInt(bound 41)-20;
+        Random random=new Random();
+        this.z=random.nextInt(41)-20;
         super.generateRandomCor();
     }
 
@@ -36,7 +36,10 @@ public class Point3d extends Point {
     }
 
     @Override
-    public void printInfo() {
-        System.out.println("Point {"+x+", "+y+"  "+z+"} Quadrant:"+getQuadrant()+" Distance:"+ getDistance());
+    public void print(){
+        System.out.println("Point3D: ["+getX()+","+getY()+","+z+"] Dist: "+getDistance());
     }
+
+
+
 }
