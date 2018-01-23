@@ -11,10 +11,10 @@ public class Point implements Geometry {
         this.y = y;
     }
 
-    public Point(){
+    public Point(int i){
         this(0,0);
-      //  x = 0;
-      //  y = 0;
+        //  x = 0;
+        //  y = 0;
     }
 
     public int getX(){
@@ -66,20 +66,21 @@ public class Point implements Geometry {
         return Math.sqrt(Math.pow(x-other.getX(),2) + Math.pow(y-other.getY(),2));
     }
 
-    public void axialSymetric(char type){
-        if (type=='x' || type=='X'){
+    public void doAxialSymetry(char type){
+        if(type == 'x' || type == 'X'){
             y=-y;
-        }else if (type=='y' || type=='Y'){
+        }
+        else if(type == 'Y'|| type == 'Y'){
             x=x-1;
         }
-    }
-
-    public void doCentralSymetry (){
-
-        x = - x;
-        y = - y;
 
     }
+
+    public void doCentralSymetry(){
+        x=-x;
+        y=-y;
+    }
+
 
 
 }

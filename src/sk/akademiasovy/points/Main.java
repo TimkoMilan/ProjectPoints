@@ -1,34 +1,49 @@
 package sk.akademiasovy.points;
 
+import sk.akademiasovy.date.MyDate;
+
 public class Main {
     public static void main(String[] args) {
+        /*
         Point p1 = new Point(8,12);
         System.out.println("Point p1 is in " + p1.getQuadrant() + " quadrant");
 
-        Point p2 = new Point();
+        Point p2 = new Point(a.getX() + b.getX());
         p2.generateRandomCor();
+
         System.out.println("Point p2 is in " + p2.getQuadrant() + " quadrant");
         System.out.println(p2.getDistance());
         p2.printInfo();
         System.out.println("Distance between points: " + p2.getDistanceFromOtherPoint(p1));
-        p2.printInfo();
-        Geometry g1 = new Point3d();
-        ((Point)g1).printInfo();    //Prv ide v zatvorke typ na ktorý to chceme pretypovat a za zatvorkou ide bodka .
-                                    //Nemozeme vytvarat New Interface .     Polymorfizmus = mnohotvarnosť .
+        Point3d point1 = new Point3d();
+        point1.generateRandomCor();
+        point1.printInfo();
 
+        Object o1 = new Point(a.getX() + b.getX());
+        Point p3 = new Point3d(2,8, 7);
+        Geometry g1 = new Point(a.getX() + b.getX());
+        ((Point)g1).printInfo();
 
-        Geometry arr = new Geometry[10];
-        Point3d temp = new Point3d();
-        p1.generateRandomCor();
+        Geometry[] arr = new Geometry[10];
+        int i;
 
-        Point point15 = new Point(2,3);
+        for(i=0;i<10;i++){
+            Point3d temp = new Point3d();
+            temp.generateRandomCor();
+            arr[i] = temp;
+        }
 
-        Line line = new Line(point15,new Point(3,4));    //mozeme vytvarat priamo nemusime specialne pre premenu vytvarat newPoint
-                                                            // moze s tymto bodom pracovat len premena Line nemoze s tym dalej pracvat main ,
-        Line line2 = new Line(1,6,4,5);
-        System.out.println("Length on the  line 1 is " +line.getLength());
-        System.out.println("Midle point of Line is " +line.getMindlePoint());
+        for(Geometry temp:arr){
+            ((Point3d)temp).printInfo();
+        }
 
+        Point bod15 = new Point(2,5);
+        Line line1 = new Line(bod15, new Point(10,4));
+        Line line2 = new Line(1,2,4,6);
+        System.out.println(line1.getLength());
+    */
 
+        MyDate date1 = new MyDate();
+        date1.today2();
     }
 }
