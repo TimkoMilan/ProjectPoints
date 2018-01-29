@@ -1,5 +1,9 @@
 package sk.akademiasovy.points;
 
+import sk.akademiasovy.Abstract.Person;
+import sk.akademiasovy.Abstract.Student;
+import sk.akademiasovy.Abstract.Teacher;
+import sk.akademiasovy.Other.MyClass;
 import sk.akademiasovy.date.MyDate;
 
 public class Main {
@@ -45,5 +49,17 @@ public class Main {
 
         MyDate date1 = new MyDate();
         date1.today2();
+        MyClass myClass = new MyClass();
+        System.out.println(myClass.isEmailValid("abcd!efgh"));
+        System.out.println(myClass.getGender("9710217396"));
+
+        Person p1 = new Teacher();
+        ((Teacher) p1).setSalary(2200);
+        System.out.println(((Teacher) p1).getSalary());
+
+        Object ppp = new Student()
+        ((Person)ppp).setAge(58);
+        
+
     }
 }

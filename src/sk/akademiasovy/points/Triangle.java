@@ -12,15 +12,15 @@ public class  Triangle implements InterfaceTriangle {
     }
 
 
-    public double getSideA(){
-        return b.getDistanceFromOtherPoint(c);
+    public double getSideA() {
+        return c.getDistanceFromOtherPoint(b);
     }
 
-    public double getSideB(){
+    public double getSideB() {
         return c.getDistanceFromOtherPoint(a);
     }
 
-    public double getSideC(){
+    public double getSideC() {
         return a.getDistanceFromOtherPoint(b);
     }
 
@@ -32,9 +32,9 @@ public class  Triangle implements InterfaceTriangle {
 
     @Override
     public double getArea() {
-        double s = getPerimeter()/2;
-        double area = Math.sqrt(s*s-getSideA())*(s*s-getSideC());
-        return area ;
+        double s = getPerimeter() / 2;
+        double area = Math.sqrt(s * s - getSideA()) * (s * s - getSideC());
+        return area;
     }
 
     @Override
@@ -42,7 +42,6 @@ public class  Triangle implements InterfaceTriangle {
         return false;
     }
 
-    @Override
     /*public boolean isRectangular() {
         double a = getSideA();
         double b = getSideB();
@@ -54,10 +53,7 @@ public class  Triangle implements InterfaceTriangle {
         else false;
     }
 */
-    @Override
-    public void isEquilateral() {
-        return true;
-    }
+
 
     @Override
     public boolean isIsosceles() {
@@ -65,29 +61,22 @@ public class  Triangle implements InterfaceTriangle {
         double sideB = a.getDistanceFromOtherPoint(b);
         double sideC = a.getDistanceFromOtherPoint(c);
 
-        if (sideA == sideB){
+        if (sideA == sideB) {
             return true;
         }
-        if (sideA == sideC){
+        if (sideA == sideC) {
             return true;
         }
-        if (sideC == sideB){
+        if (sideC == sideB) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
-
-   /* @Override
+    @Override
     public boolean isEquilateral() {
-        if (getSideA() == getSideB() == getSideC()) return true;
-        else return false;
-
+        return false;
     }
+}
 
-       return getSideA() == getSideB();
-    */
-
-  }
 
